@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage{amsmath}   % equations
+\usepackage{amssymb}   % \mathbb, also loads amsfonts
+\usepackage{graphicx}  % images
+\usepackage{array}     % for \raggedright\arraybackslash in tabular
+\usepackage{booktabs}
+\usepackage{cleveref}
+\title{Feynmann Excercises Physics
+}
+% \author{nicolas.kubail}
+% \date{August 2025}
+\pdfminorversion=7
+\pdfobjcompresslevel=0
+\begin{document}
+
+\maketitle
+
+
+\section{Atoms in Motion3}
+Refer to chapters 1-3.
+
+\subsection{If heat is merely molecular motion, what is the difference between a hot , stationary baseball and a cool, rapidly moving one?}
+\begin{itemize}
+    \item A hot stationary baseball is made of atoms that are moving and bouncing around at a high speed, even though the macro object of the “baseball” is standing still.
+    \item The cool rapidly moving one is the opposite, it’s constituent atoms are moving slowly, while the macro object is moving fast across space.
+    \item The difference is in the manner of the motion, organized (thrown ball), disorganized (heat).
+\end{itemize}
+
+
+\subsection{If the atoms of all objects are perpetually in motion, how can there be any permanent objects, such as fossil imprints?}
+\begin{itemize}
+    \item Atoms are attracted to one another (bonds with other atoms, electromagnetic force?), and that attraction holds them together until an external force rips them apart. They dont have enough energy alone to break those bonds. In solids that attraction causes them to form crystalline structures which are stable arrangements of atoms. 
+    \item That external force can be a chemical reaction, meaning it changes the composition of the atoms for instance creating molecules and ripping them from their original arrangement, or a non-chemical reaction like being struck by something.
+\end{itemize}
+
+
+\subsection{Explain qualitatively why and how friction in a moving machine produces heat. Explain also, if you can, why heat cannot produce useful motion by the reverse process.}
+
+\begin{itemize}
+    \item Heat is nothing more than the movement of atoms, the more movement the more heat. 
+    \item When two solids are rubbing against each other, the (organized) mechanical energy going into the system becomes (disorganized) internal energy in the material and the surrounding environment.
+    \item The microscoping imperfections of the solids are grinding against each other, catching, releasing, vibrating, and if we zoom in further that means all that chaos is pushing and pulling atoms around.
+    \item The second part of the question has to do with entropy (second law of thermodynamics). A system can go from an ordered state to a disordered state but not the other way around. Thermodynamic processes are not reversible.
+\end{itemize}
+
+\subsection{Chemists have found that the molecules of rubber consist of long criss-crossed chains of atoms. Explain why a rubber band becomes warm when it is stretched.}
+
+\begin{itemize}
+    \item High entropy at rest: long polymer chains are tangled.
+    \item Low entropy when deformed: chains are more ordered.
+    \item Temperature and entropy are inversely related.
+    \item So as we stretch, the entropy drops, and thus temperature has to increase. And vice versa.
+\end{itemize}
+
+\subsection{What should happen to a rubber band which is supporting a given weight, if it is heated? (To find out, try it.)}
+
+\begin{itemize}
+    \item You add heat $Q>0$.
+    \item This forces the molecules to move toward a higher entropy state (S>0).
+    \item The higher entropy state for a polymer is tangled and coiled.
+    \item Coiled chains shorten the band, causing it to contract and lift the weight.
+\end{itemize}
+
+\subsection{Can you explain why there are no crystals that have the shape of a regular pentagon? (Triangles, squares, and hexagons are common in crystal forms.)}
+
+\begin{itemize}
+    \item Because you can’t pack pentagons on the Euclidean plane, as 2pi is not divisible by 108 degrees. So you can’t tesselate a plane. (No translational symmetry atomic structure.
+\end{itemize}
+
+\subsection{You are given a large number of steel balls of equal diameter d and a container of known volume V. Every dimension of the container is much greater than the diameter of a ball. What is the greatest number of balls, N, that can be placed in the container}
+
+\begin{itemize}
+    \item $4/3 pi r^3 = S$ (volume of sphere)
+    \item However packing a 3d space with spheres will create gaps
+    \item So what is the tesselation pattern of perfect spheres? We need to calculate the in between space 
+    \item N = V/(S)
+    \item N = V/(S+X)
+    \item Gauss’s sphere packing rule
+\end{itemize}
+
+\subsection{How should the pressure P of a gas vary with n, the number of atoms per unit volume, and (v), the average speed of an atom? (Should P be proportional to n and/ or to (v), or should it vary more, or less, rapidly than linearly?)}
+
+\begin{itemize}
+    \item P = pressure
+    \item n = atoms/unit volume
+    \item v = average speed
+    \item average speed is heat so the more it heats up the greater the pressure regardless of density (n)
+    \item P also goes up with more density regardless of velocity staying constant
+    \item $P = 1/3 N/V mv^2$
+    \item Linearly with more density, and quadratically with average speed
+
+\end{itemize}
+
+
+\section{Chapter 2}
+
+
+Mathematically, the optimal path $P^*$ is the one that minimizes the sum of the costs (or weights) of the edges it traverses:
+$$P^* = \arg\min_{P} \sum_{i=1}^{n-1} w(v_i, v_{i+1})$$
+where $w(v_i, v_{i+1})$ is the cost to travel between adjacent vertices $v_i$ and $v_{i+1}$. This cost is typically a function of distance and proximity to known obstacles on the costmap.
+
+
+\end{document}
