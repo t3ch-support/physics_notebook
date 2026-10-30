@@ -16,47 +16,62 @@
 \maketitle
 
 
-\section{Atoms in Motion3}
+\section{Atoms in Motion}
 Refer to chapters 1-3.
 
-\subsection{If heat is merely molecular motion, what is the difference between a hot , stationary baseball and a cool, rapidly moving one?}
+\subsection{If heat is merely molecular motion, what is the difference between a hot, stationary baseball and a cool, rapidly moving one?}
 \begin{itemize}
     \item A hot stationary baseball is made of atoms that are moving and bouncing around at a high speed, even though the macro object of the “baseball” is standing still.
     \item The cool rapidly moving one is the opposite, it’s constituent atoms are moving slowly, while the macro object is moving fast across space.
     \item The difference is in the manner of the motion, organized (thrown ball), disorganized (heat).
 \end{itemize}
 
+Every atom's velocity can be split into two independent pieces:
+
+  $$\vec{v}{\text{atom}} = \vec{v}{\text{bulk}} + \vec{v}_{\text{random}}$$
+\begin{itemize}
+    \item $\vec{v}_{\text{bulk}}$ — the shared, coherent velocity every atom has in addition to its jiggling, because the whole object is moving together (the
+    thrown ball case).
+    \item $\vec{v}_{\text{random}}$ — the individual, chaotic jiggling on top of that, different in direction and magnitude for every atom (the heat).
+\end{itemize}
 
 \subsection{If the atoms of all objects are perpetually in motion, how can there be any permanent objects, such as fossil imprints?}
 \begin{itemize}
-    \item Atoms are attracted to one another (bonds with other atoms, electromagnetic force?), and that attraction holds them together until an external force rips them apart. They dont have enough energy alone to break those bonds. In solids that attraction causes them to form crystalline structures which are stable arrangements of atoms. 
-    \item That external force can be a chemical reaction, meaning it changes the composition of the atoms for instance creating molecules and ripping them from their original arrangement, or a non-chemical reaction like being struck by something.
-\end{itemize}
+    \item $E_{\text{bond}}$ = \textbf{bond energy}, this is the energy needed to completely separate two bonded atoms. pull them from their equilibrium spacing out to infinity, overcoming the attractive force between them. It's a fixed property of the pair of atoms and the type of bond (ionic, covalent, etc.) — it doesn't depend on temperature.
+    \item $E_{\text{thermal}}$ = \textbf{thermal energy} is the typical amount of kinetic energy an atom has just from jiggling around due to heat, at tempearature $T$. The standard estimate (average) is: $$E_{\text{thermal}} \sim k_B T$$
+    where $k_B$ is Boltzmann's constant, and $T$ is the absolute temperature (Kelvin). 
+    \item Whether an atom stays bonded or breaks free comes down to comparing these two:
+    \subitem If $E_{\text{thermal}} \ll E_{\text{bond}}$ (i.e. $k_B T \ll E_{\text{bond}}$): the atom doesn't have enough energy to escape the attractive well. It
+    vibrates in place but stays bonded — this is the solid, "permanent" case.
+    \subitem If $E_{\text{thermal}} \gtrsim E_{\text{bond}}$: the atom's jiggling is energetic enough to break free of the bond — this is melting, evaporation, or
+    bond-breaking.
 
+    \item At everyday/room temperature, for most solids, $k_B T$ is far smaller than typical bond energies, which is exactly why ordinary objects (and fossil imprints) stay intact indefinitely without special intervention and why it takes a large energy input (heat, chemical reaction, or impact) to disrupt that arrangement.
+\end{itemize}
 
 \subsection{Explain qualitatively why and how friction in a moving machine produces heat. Explain also, if you can, why heat cannot produce useful motion by the reverse process.}
 
 \begin{itemize}
-    \item Heat is nothing more than the movement of atoms, the more movement the more heat. 
+    \item Heat is nothing more than the chaotic movement of atoms $\vec{v}_{\text{random}}$, the more movement the more heat. 
     \item When two solids are rubbing against each other, the (organized) mechanical energy going into the system becomes (disorganized) internal energy in the material and the surrounding environment.
-    \item The microscoping imperfections of the solids are grinding against each other, catching, releasing, vibrating, and if we zoom in further that means all that chaos is pushing and pulling atoms around.
-    \item The second part of the question has to do with entropy (second law of thermodynamics). A system can go from an ordered state to a disordered state but not the other way around. Thermodynamic processes are not reversible.
+    \item The microscopic imperfections of the solids are grinding against each other. So the builk kinetic energy gets converted into heat at the atomic level.
+    \item The second part of the question has to do with entropy (second law of thermodynamics). A system can go from an ordered state to a disordered state, but it is highly improbably for spontaneous organization to happen in order to reverse that process. We usually need an external mechanism to go from disordered state to useful motion.
 \end{itemize}
 
 \subsection{Chemists have found that the molecules of rubber consist of long criss-crossed chains of atoms. Explain why a rubber band becomes warm when it is stretched.}
 
 \begin{itemize}
-    \item High entropy at rest: long polymer chains are tangled.
-    \item Low entropy when deformed: chains are more ordered.
-    \item Temperature and entropy are inversely related.
-    \item So as we stretch, the entropy drops, and thus temperature has to increase. And vice versa.
+    \item High entropy at rest: long polymer chains are tangled (high configurational entropy, lots of possible arrangements).
+    \item Low entropy when deformed: chains are pulled taut and thus ordered (lower configurational entropyfewer possible arrangements, lower disorder).
+    \item The loss of entropy needs to be conserved, so it appears inside the materail as extra atomic jiggling.
+    \item More atomic jiggling is heat, so the band is warmer.
 \end{itemize}
 
 \subsection{What should happen to a rubber band which is supporting a given weight, if it is heated? (To find out, try it.)}
 
 \begin{itemize}
     \item You add heat $Q>0$.
-    \item This forces the molecules to move toward a higher entropy state (S>0).
+    \item This forces the molecules to move toward a higher entropy state $S>0$.
     \item The higher entropy state for a polymer is tangled and coiled.
     \item Coiled chains shorten the band, causing it to contract and lift the weight.
 \end{itemize}
@@ -92,12 +107,11 @@ Refer to chapters 1-3.
 \end{itemize}
 
 
-\section{Chapter 2}
+\section{Placholder}
 
 
-Mathematically, the optimal path $P^*$ is the one that minimizes the sum of the costs (or weights) of the edges it traverses:
+Placholder text
 $$P^* = \arg\min_{P} \sum_{i=1}^{n-1} w(v_i, v_{i+1})$$
-where $w(v_i, v_{i+1})$ is the cost to travel between adjacent vertices $v_i$ and $v_{i+1}$. This cost is typically a function of distance and proximity to known obstacles on the costmap.
 
 
 \end{document}
