@@ -28,7 +28,7 @@ Refer to chapters 1-3.
 
 Every atom's velocity can be split into two independent pieces:
 
-  $$\vec{v}{\text{atom}} = \vec{v}{\text{bulk}} + \vec{v}_{\text{random}}$$
+  $$\vec{v}_{\text{atom}} = \vec{v}_{\text{bulk}} + \vec{v}_{\text{random}}$$
 \begin{itemize}
     \item $\vec{v}_{\text{bulk}}$ — the shared, coherent velocity every atom has in addition to its jiggling, because the whole object is moving together (the
     thrown ball case).
@@ -37,6 +37,7 @@ Every atom's velocity can be split into two independent pieces:
 
 \subsection{If the atoms of all objects are perpetually in motion, how can there be any permanent objects, such as fossil imprints?}
 \begin{itemize}
+    \item Bonds form because atoms attract each other electromagnetically, and settle into whatever arrangement has the lowest energy — not every atom bonds to everything nearby, since each only has a limited number of outer electrons available, and this attraction only acts once atoms are already close together.
     \item $E_{\text{bond}}$ = \textbf{bond energy}, this is the energy needed to completely separate two bonded atoms. pull them from their equilibrium spacing out to infinity, overcoming the attractive force between them. It's a fixed property of the pair of atoms and the type of bond (ionic, covalent, etc.) — it doesn't depend on temperature.
     \item $E_{\text{thermal}}$ = \textbf{thermal energy} is the typical amount of kinetic energy an atom has just from jiggling around due to heat, at tempearature $T$. The standard estimate (average) is: $$E_{\text{thermal}} \sim k_B T$$
     where $k_B$ is Boltzmann's constant, and $T$ is the absolute temperature (Kelvin). 
@@ -70,40 +71,87 @@ Every atom's velocity can be split into two independent pieces:
 \subsection{What should happen to a rubber band which is supporting a given weight, if it is heated? (To find out, try it.)}
 
 \begin{itemize}
-    \item You add heat $Q>0$.
-    \item This forces the molecules to move toward a higher entropy state $S>0$.
     \item The higher entropy state for a polymer is tangled and coiled.
+    \item By definition, higher entropy means more configurations possible
+    \item The weight is pulling down because of gravity, holding the chain stretched out, lower entropy state.
+    \item The more heat you add, the more intense the atomic chains get moved around, and the more likely (statistically) they will land in a coiled configuration
     \item Coiled chains shorten the band, causing it to contract and lift the weight.
 \end{itemize}
 
 \subsection{Can you explain why there are no crystals that have the shape of a regular pentagon? (Triangles, squares, and hexagons are common in crystal forms.)}
 
 \begin{itemize}
-    \item Because you can’t pack pentagons on the Euclidean plane, as 2pi is not divisible by 108 degrees. So you can’t tesselate a plane. (No translational symmetry atomic structure.
+    \item 2D Crystals are tesselations of bonded atoms (atomic structure), 3D Crystal are periodic lattices but we are abstracting for this question.
+    \item Triangles, squares, and hexagons can be tiled into patterns that exhibit translational symmetry, and thus can perfectly pack the euclidean plane without gaps or overlaps.
+    \item Pentagons do not have translational symmetry becuase 108 degrees ($3\pi/5$) doesnt fit into 360 degrees ($2\pi$) = 10/3.
 \end{itemize}
 
 \subsection{You are given a large number of steel balls of equal diameter d and a container of known volume V. Every dimension of the container is much greater than the diameter of a ball. What is the greatest number of balls, N, that can be placed in the container}
 
 \begin{itemize}
-    \item $4/3 pi r^3 = S$ (volume of sphere)
-    \item However packing a 3d space with spheres will create gaps
-    \item So what is the tesselation pattern of perfect spheres? We need to calculate the in between space 
-    \item N = V/(S)
-    \item N = V/(S+X)
-    \item Gauss’s sphere packing rule
+    \item $N$, number of spheres
+    \item $V$, volume of container
+    \item $d$, diameter of spheres
+    \item $\eta$, packing fraction, no need to specify since it is a local, geometric property, dependent on the sphere's shared shape, not on $V$ or $d$.
+    \item $S = \frac{4}{3}\pi r^3 = \frac{4}{3}\pi\left(\frac{d}{2}\right)^3 = \frac{\pi d^3}{6}$, volume of sphere
+    \item $$N \approx \frac{\eta V}{S} = \frac{\eta V}{\frac{\pi d^3}{6}} = \frac{6\eta V}{\pi d^3}$$
 \end{itemize}
 
 \subsection{How should the pressure P of a gas vary with n, the number of atoms per unit volume, and (v), the average speed of an atom? (Should P be proportional to n and/ or to (v), or should it vary more, or less, rapidly than linearly?)}
 
 \begin{itemize}
-    \item P = pressure
-    \item n = atoms/unit volume
-    \item v = average speed
-    \item average speed is heat so the more it heats up the greater the pressure regardless of density (n)
-    \item P also goes up with more density regardless of velocity staying constant
-    \item $P = 1/3 N/V mv^2$
-    \item Linearly with more density, and quadratically with average speed
+    \item $P$, pressure of gas
+    \item $N$, total number of atoms in the container
+    \item $V$, container's total volume
+    \item $n$, atoms/unit volume, $n \equiv N/V$
+    \item $v$, average speed of an atom
+    \item $m$, mass of single gas atom/molecule
+    \item $P = \frac{1}{3}\frac{N}{V}mv^2$
+    \item How hard each individual hit is - the momentum an atom delivers per collision is proportional to $v$ (faster atom, bigger kick on the wall)
+    \item How often hits happen - a faster atom also crosses back and forth across the container more often per second, so collision frequency is also proportional to $v$.
+    \item Collision frequency additionally depends on $n$ (more atoms around = more collisions), but density has no effect on how hard each individual collision is.
+    \item Pressure is the rate at which momentum gets delivered to the wall, which is momentum per hit x hits per second
+    \item That's why $n$ shows up to the first power (it only affects frequency)
+    \item While $v$ shows up squared (it affects both the force of each hit AND how often hits land).
+    \item So P scales linearly with more density ($n$), and quadratically with average speed ($v$)
 
+\end{itemize}
+
+\subsection{Ordinary air has a density of about $0.001\text{ g\,cm}^{-3}$, while liquid air has a density of about $1.0\text{ g\,cm}^{-3}$.}
+
+\subsubsection{Estimate the number of air molecules per cm$^3$ in ordinary air, $n_G$, and in liquid air, $n_L$.}
+\begin{itemize}
+    \item Density is mass per unit volume, i.e. $\frac{g}{cm^3}$
+    \item $\rho$, density of the gas (mass per unit volume), with $\rho_G = 0.001\text{ g/cm}^3$ for ordinary air and $\rho_L = 1.0\text{ g/cm}^3$ for liquid air
+    \item $m$, mass in grams of an air molecule
+    \item $n$ number of molecules
+    \item $$\rho = n \cdot m \quad\Rightarrow\quad n = \frac{\rho}{m}$$
+    \item Unit check: $n$ is in molecules/cm$^3$ and $m$ is in g/molecule, so $n \cdot m = \frac{\text{molecules}}{\text{cm}^3}\cdot\frac{\text{g}}{\text{molecule}} = \frac{\text{g}}{\text{cm}^3}$, the "molecule" units cancel, confirming the formula correctly gives density.
+    \item $$n_G = \frac{\rho_G}{m} = \frac{0.001 \text{ g/cm}^3}{m}$$
+    \item $0.001g/m = n_G$
+    \item $1.0g/m = n_L$
+    \item Plugging in $m \approx 5.3\times10^{-23}$ g from 1.9.2: $$n_G = \frac{1\times10^{-3}\text{ g/cm}^3}{5.3\times10^{-23}\text{ g}} \approx 1.9\times10^{19}\text{ cm}^{-3}, \qquad n_L = \frac{1.0\text{ g/cm}^3}{5.3\times10^{-23}\text{ g}} \approx 1.9\times10^{22}\text{ cm}^{-3}$$
+\end{itemize}
+
+\subsubsection{Estimate the mass $m$ of an air molecule.}
+\begin{itemize}
+    \item Assuming an air molecule is $O_2$, meaning two bonded oxygen atoms
+    \item Each oxygen atom has an atomic number 8, meaning there are 8 protons in the nucleus
+    \item Each oxygen atom also has 8 neutrons, making each atom have a total of 16 nucleons
+    \item $O_2$ therefore has 32 nucleons
+    \item Electrons are negligible for an estimate so lets ignore them for now
+    \item Each nucleon weighs approximately $1.67 \times 10^{-24}$ g
+    \item $m \approx 32 \times (1.67\times10^{-24}\text{ g}) \approx 5.3\times 10^{-23}$ g per molecule.
+\end{itemize}
+
+\subsubsection{Estimate the average distance $l$ an air molecule should travel between collisions at normal temperature and pressure (NTP, $20^\circ$C at 1 atm). This distance is called the mean free path.}
+\begin{itemize}
+    \item
+\end{itemize}
+
+\subsubsection{Estimate at what pressure $P$, in normal atmospheres, a vacuum system should be operated in order that the mean free path be about one meter.}
+\begin{itemize}
+    \item
 \end{itemize}
 
 
